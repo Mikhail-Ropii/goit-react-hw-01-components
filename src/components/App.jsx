@@ -1,7 +1,10 @@
-import Profile from './Profiles';
-import user from './user.json';
-import Statistics from './Statistics';
-import data from './data.json';
+import Profile from './profiles/Profiles';
+import user from '../data/user';
+import StatisticsList from './statistics/StatisticsList';
+import data from '../data/data';
+import FriendList from "./friendList/FriendList"
+import friends from "../data/friends";
+
 
 export default function App() {
   return (
@@ -13,11 +16,9 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-
-      {data.map(statistic => (
-<Statistics title="Upload stats" stats={statistic} />
-      
-      ))};      
-      <Statistics stats={statistic} />
+      <StatisticsList title="Upload stats" stats={data}
+      />
+      <FriendList friends={friends}
+      />
       </div>);
 };

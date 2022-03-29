@@ -1,0 +1,22 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a7a7a7
+}
+
+.statList {
+    display: flex;
+}
+
+.item {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    min-width: 70px;
+    min-height: 70px;
+    background-color: #d6d6d6;
+}
