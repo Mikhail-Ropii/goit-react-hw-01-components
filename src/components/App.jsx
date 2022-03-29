@@ -4,6 +4,8 @@ import StatisticsList from './statistics/StatisticsList';
 import data from '../data/data';
 import FriendList from "./friendList/FriendList"
 import friends from "../data/friends";
+import TransactionHistory from "./transactions/TransactionHistory";
+import transactions from "../data/transactions";
 
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
       <StatisticsList title="Upload stats" stats={data}
       />
       <FriendList friends={friends}
+      />
+      <TransactionHistory items={transactions}
       />
       </div>);
 };
