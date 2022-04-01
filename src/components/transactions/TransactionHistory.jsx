@@ -1,9 +1,10 @@
 import TransactionData from "./TransactionsData";
+import css from "./TransactionHistory.module.css";
 
 
 export default function TransactionHistory({items}) {
-    return (
-        <table className="transaction-history">
+    return (<section className={css.transactions}>
+        <table className={css.transTable}>
   <thead>
     <tr>
       <th>Type</th>
@@ -19,6 +20,7 @@ export default function TransactionHistory({items}) {
       
                 </tr>)}
                 </tbody>
-            </table>
+        </table>
+        </section>
     )
 }

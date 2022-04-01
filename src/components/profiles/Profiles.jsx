@@ -1,7 +1,8 @@
 import propTypes from "prop-types";
 import css from "./Profiles.module.css"
 
-export default function Profile({ username, tag, location, avatar, stats }) {
+export default function Profile({ user }) {
+  const {username, tag, location, avatar, stats} = user
   return (<div className={css.profile}>
     <div className={css.description}>
       <img
@@ -32,9 +33,11 @@ export default function Profile({ username, tag, location, avatar, stats }) {
 };
 
 Profile.propTypes = {
-  username: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
-  location: propTypes.string.isRequired,
-  avatar: propTypes.string.isRequired,
-  stats: propTypes.object.isRequired,
+    user: propTypes.shape({
+    username: propTypes.string.isRequired,
+    tag: propTypes.string.isRequired,
+    location: propTypes.string.isRequired,
+    avatar: propTypes.string.isRequired,
+    stats: propTypes.object.isRequired,
+  })
 }

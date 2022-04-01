@@ -1,4 +1,4 @@
-
+import propTypes from "prop-types";
 
 export default function TransactionData({ item }) 
 {
@@ -9,4 +9,10 @@ export default function TransactionData({ item })
         <td>{currency}</td>
         </>
     )
+}
+
+TransactionData.propTypes = {
+    type: propTypes.string,
+    amount: propTypes.number,
+    currency: propTypes.string,
 }
