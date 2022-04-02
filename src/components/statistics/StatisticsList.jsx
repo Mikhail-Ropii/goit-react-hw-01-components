@@ -1,12 +1,12 @@
 import propTypes from "prop-types"
 import Statistics from "./Statistics"
 import css from "./StatisticsList.module.css"
-import generateColor from "../generateColor"
+import generateColor from "../../data/generateColor"
 
 
 export default function StatisticsList({ stats, title }) {
     return ( <section className={css.list}>
-      {title !== '' && <h2 className="title">{title}</h2>}
+      {title && <h2 className="title">{title}</h2>}
         <ul className={css.statList}>
             {stats.map(stat => <li key={stat.id} className={css.item} style={{ backgroundColor: generateColor()}}>
             <Statistics

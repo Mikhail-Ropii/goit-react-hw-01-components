@@ -1,8 +1,7 @@
 import propTypes from "prop-types";
 import css from "./Profiles.module.css"
 
-export default function Profile({ user }) {
-  const {username, tag, location, avatar, stats} = user
+export default function Profile({ username, tag, location, avatar, stats }) {
   return (<div className={css.profile}>
     <div className={css.description}>
       <img
@@ -33,11 +32,9 @@ export default function Profile({ user }) {
 };
 
 Profile.propTypes = {
-    user: propTypes.shape({
     username: propTypes.string.isRequired,
     tag: propTypes.string.isRequired,
     location: propTypes.string.isRequired,
     avatar: propTypes.string.isRequired,
     stats: propTypes.object.isRequired,
-  })
 }

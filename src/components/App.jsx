@@ -11,7 +11,12 @@ import transactions from "../data/transactions";
 export default function App() {
   return (
     <div>
-      <Profile user={user}
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
       />
       <StatisticsList title="Upload stats" stats={data}
       />
@@ -19,5 +24,6 @@ export default function App() {
       />
       <TransactionHistory items={transactions}
       />
-      </div>);
+    </div>);
+  
 };

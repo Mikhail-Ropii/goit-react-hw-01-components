@@ -6,11 +6,11 @@ import css from "./FriendList.module.css"
 export default function FriendList({friends}) {
     return (
         <ul className={css.friendList}>
-            {friends.map(friend => <li key={friend.id} className={css.item}>
+            {friends.map(({id, avatar, name, isOnline}) => <li key={id} className={css.item}>
             <FriendListItem
-                avatar={friend.avatar}
-                name={friend.name}
-                isOnline={friend.isOnline}
+                avatar={avatar}
+                name={name}
+                isOnline={isOnline}
             />
             </li>)}
             </ul>
